@@ -67,3 +67,12 @@ appendNavItem.textContent = "Append"
 appendNavItem.href = "#"
 appendNavItem.style.color = "green"
 document.querySelector("nav").appendChild(appendNavItem)
+
+let mainText = document.querySelector("h1");
+mainText.textContent = "DOM IS AWESOME"
+
+let startButton = document.querySelector("button");
+startButton.textContent = "Get Started"
+
+let codeSnippet = document.getElementById("cta-img");
+codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
