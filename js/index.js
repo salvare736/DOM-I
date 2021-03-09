@@ -69,13 +69,26 @@ appendNavItem.style.color = "green"
 document.querySelector("nav").appendChild(appendNavItem)
 
 let mainText = document.querySelector("h1");
-mainText.textContent = "DOM IS AWESOME"
+mainText.innerHTML = "DOM <br> IS <br> AWESOME"
 
 let startButton = document.querySelector("button");
 startButton.textContent = "Get Started"
 
 let codeSnippet = document.getElementById("cta-img");
 codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
+
+let topContent = document.querySelector(".top-content");
+let topContentText = topContent.querySelectorAll(".text-content");
+let topContentText1 = topContentText[0];
+let topContentText2 = topContentText[1];
+let topContentText1H = topContentText1.querySelector("h4");
+let topContentText1P = topContentText1.querySelector("p");
+let topContentText2H = topContentText2.querySelector("h4");
+let topContentText2P = topContentText2.querySelector("p");
+topContentText1H.textContent = siteContent["main-content"]["features-h4"]
+topContentText1P.textContent = siteContent["main-content"]["features-content"]
+topContentText2H.textContent = siteContent["main-content"]["about-h4"]
+topContentText2P.textContent = siteContent["main-content"]["about-content"]
 
 let middleCode = document.getElementById("middle-img");
 middleCode.setAttribute('src', siteContent["main-content"]["middle-img-src"])
