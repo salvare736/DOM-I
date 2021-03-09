@@ -42,12 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navItems = document.querySelectorAll('a');
-navItems[0].textContent = "Services"
-navItems[1].textContent = "Product"
-navItems[2].textContent = "Vision"
-navItems[3].textContent = "Features"
-navItems[4].textContent = "About"
-navItems[5].textContent = "Contact"
+navItems[0].textContent = siteContent["nav"]["nav-item-1"]
+navItems[1].textContent = siteContent["nav"]["nav-item-2"]
+navItems[2].textContent = siteContent["nav"]["nav-item-3"]
+navItems[3].textContent = siteContent["nav"]["nav-item-4"]
+navItems[4].textContent = siteContent["nav"]["nav-item-5"]
+navItems[5].textContent = siteContent["nav"]["nav-item-6"]
 
 navItems[0].style.color = "green"
 navItems[1].style.color = "green"
@@ -72,7 +72,7 @@ let mainText = document.querySelector("h1");
 mainText.innerHTML = "DOM <br> IS <br> AWESOME"
 
 let startButton = document.querySelector("button");
-startButton.textContent = "Get Started"
+startButton.textContent = siteContent["cta"]["button"]
 
 let codeSnippet = document.getElementById("cta-img");
 codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
@@ -93,14 +93,32 @@ topContentText2P.textContent = siteContent["main-content"]["about-content"]
 let middleCode = document.getElementById("middle-img");
 middleCode.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+let botContent = document.querySelector(".bottom-content");
+let botContentText = botContent.querySelectorAll(".text-content");
+let botContentText1 = botContentText[0];
+let botContentText2 = botContentText[1];
+let botContentText3 = botContentText[2];
+let botContentText1H = botContentText1.querySelector("h4");
+let botContentText1P = botContentText1.querySelector("p");
+let botContentText2H = botContentText2.querySelector("h4");
+let botContentText2P = botContentText2.querySelector("p");
+let botContentText3H = botContentText3.querySelector("h4");
+let botContentText3P = botContentText3.querySelector("p");
+botContentText1H.textContent = siteContent["main-content"]["services-h4"]
+botContentText1P.textContent = siteContent["main-content"]["services-content"]
+botContentText2H.textContent = siteContent["main-content"]["product-h4"]
+botContentText2P.textContent = siteContent["main-content"]["product-content"]
+botContentText3H.textContent = siteContent["main-content"]["vision-h4"]
+botContentText3P.textContent = siteContent["main-content"]["vision-content"]
+
 let contact = document.querySelector(".contact");
 let contactH = contact.querySelector("h4");
-contactH.textContent = "CONTACT"
+contactH.textContent = siteContent["contact"]["contact-h4"]
 let contactP = contact.querySelectorAll("p");
 contactP[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
-contactP[1].textContent = "1 (888) 888-8888"
-contactP[2].textContent = "sales@greatidea.io"
+contactP[1].textContent = siteContent["contact"]["phone"]
+contactP[2].textContent = siteContent["contact"]["email"]
 
 let footer = document.querySelector("footer");
 let footerP = footer.querySelector("p");
-footerP.textContent = "Copyright Great Idea! 2018"
+footerP.textContent = siteContent["footer"]["copyright"]
