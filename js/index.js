@@ -76,3 +76,18 @@ startButton.textContent = "Get Started"
 
 let codeSnippet = document.getElementById("cta-img");
 codeSnippet.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleCode = document.getElementById("middle-img");
+middleCode.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let contact = document.querySelector(".contact");
+let contactH = contact.querySelector("h4");
+contactH.textContent = "CONTACT"
+let contactP = contact.querySelectorAll("p");
+contactP[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
+contactP[1].textContent = "1 (888) 888-8888"
+contactP[2].textContent = "sales@greatidea.io"
+
+let footer = document.querySelector("footer");
+let footerP = footer.querySelector("p");
+footerP.textContent = "Copyright Great Idea! 2018"
